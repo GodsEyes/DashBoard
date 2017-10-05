@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DashBoardRarus</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+<div id="outer">
+    <div id="header">
+        <div id="menu">
+            <ul id="tabs">
+                <li><a href="/">Table tasks</a></li>
+                <li><a href="/conf">Configure</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <%= yield %>
+    </div>
+</div>
+</body>
+</html>

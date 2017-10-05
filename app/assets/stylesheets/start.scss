@@ -1,0 +1,104 @@
+// Place all the styles related to the start controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.table {
+    display: block;
+}
+table { border-collapse: collapse; }
+table th { font-weight: normal; color: black; }
+table th, table td { font: 12px Verdana,sans-serif; padding: 5px 4px;}
+table.list th, table.list td { vertical-align: top; min-width: 5em; width: auto; }
+table.list { border-width: 1px; margin-bottom: 1em; }
+table.list th, table.list td { border: 1px solid #ccc; }
+table.list th { text-align: center; }
+table.list th.plus-minus { border: none; min-width: 2em; }
+table.list td a { display: block; width: 100%; }
+table.list th a.sort { display: block; width: 100%; cursor: pointer; }
+table.list th a.sort .arrow { color: #888; }
+table.list td p { margin: 0; padding: 1px 0 0 0; }
+table.list td p.warning { margin: 0; padding: 5px; }
+
+table.list td.plain, table.list td.plain td, table.list td.plain th { border: none; background: none; }
+table.list th.plain { border-left: none; border-top: none; border-right: none; background: none; }
+table.list th.plain h3 { margin: 0; border: 0; }
+
+div.section table.list, div.section-hidden table.list { margin-bottom: 0; }
+
+tr.alt1>td { background: #eee; }
+tr.alt2>td { background: #fff; }
+
+body {
+    font: 12px Verdana,sans-serif;
+    color: #484848;
+    padding: 8px 35px;
+}
+
+#menu {
+    border-bottom: 1px solid #FF8C00;
+    overflow: auto;
+    width: 100%;
+}
+div {
+    display: block;
+}
+#menu ul {
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+#menu li {
+    float: left;
+    list-style-type: none;
+    padding: 0 2em 0 0;
+}
+user agent stylesheet
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+#menu li a {
+    display: block;
+    padding: 0.5em;
+}
+
+#menu a {
+    color: #444;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: auto;
+    text-decoration: underline;
+}
+
+
+
+#circlered {
+	width: 10px;
+	height: 10px;
+	background: red;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin: auto;
+}
+#circlegreen {
+	width: 10px;
+	height: 10px;
+	background: green;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin: auto;
+}
