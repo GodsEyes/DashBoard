@@ -1,0 +1,33 @@
+<%= form_with scope: :branche, url: branches_path, local: true do |form| %>
+    <h2>Создание филиала</h2>
+    <% if @branch.errors.any? %>
+        <div id="error_explanation">
+          <h3>
+            <%= pluralize(@branch.errors.count, "ошибка!","ошибки!") %> <br>
+            Не правильно заполнены поля филиала!
+          </h3>
+          <ul>
+            <% @branch.errors.full_messages.each do |msg| %>
+                <li> <%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <p>
+      <%= form.label "Имя филиала" %> <br>
+      <%= form.text_field :name %>
+    </p>
+    <p>
+      <%= form.label "КОД (из 1С)" %> <br>
+      <%= form.text_field :code %>
+    </p>
+    <p>
+      <%= form.label "УИД (из 1С)" %><br>
+      <%= form.text_field :uid %>
+    </p>
+    <p>
+      <%= form.submit "Cоздать" %>
+      <%= link_to 'Отмена', controller: 'branches' %>
+    </p>
+
+<% end %>

@@ -1,0 +1,23 @@
+<h1>Список филиалов</h1>
+<%= link_to 'Создать филиал', new_branch_path %>
+<div class='table'>
+<table class='list'>
+  <tr>
+    <th>№</th>
+    <th>Имя</th>
+    <th>Код</th>
+    <th>УИД</th>
+  </tr>
+
+  <% @branch.each do |branch| %>
+  <tr>
+    <td><%= branch.id %></td>
+    <td><%= link_to branch.name , branch_path(branch) %></td>
+    <td><%= branch.code %></td>
+    <td><%= branch.uid %></td>
+    <td><%= link_to 'Изменить', edit_branch_path(branch) %></td>
+  </tr>
+  <% end %>
+</table>
+</div>
+

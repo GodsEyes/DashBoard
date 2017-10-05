@@ -1,0 +1,18 @@
+<%= form_with scope: :task,url: tasks_path, local: true do |form| %>
+    <p>
+      <%= form.label "Название задачи" %> <br>
+      <%= form.text_field :name %>
+    </p>
+    <p>
+      <%= form.label "Филиал" %> <br>
+      <%= form.text_field :branch %>
+    </p>
+    <p>
+      <%= form.label "Выполенна" %>
+      <%= form.check_box :status %> <br>
+      <!--<%= form.text_field :status %>-->
+    </p>
+    <p>
+      <%= form.submit "создать/обновить" %>
+    </p>
+<% end %>
