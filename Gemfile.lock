@@ -44,7 +44,7 @@ GEM
     bindex (0.5.0)
     builder (3.2.3)
     byebug (9.1.0)
-    capybara (2.15.1)
+    capybara (2.15.3)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (>= 1.3.3)
@@ -64,6 +64,7 @@ GEM
     crass (1.0.2)
     erubi (1.6.1)
     execjs (2.7.0)
+    ffi (1.9.18)
     ffi (1.9.18-x64-mingw32)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -85,8 +86,11 @@ GEM
     minitest (5.10.3)
     multi_json (1.12.2)
     nio4r (2.1.0)
+    nokogiri (1.8.1)
+      mini_portile2 (~> 2.3.0)
     nokogiri (1.8.1-x64-mingw32)
       mini_portile2 (~> 2.3.0)
+    pg (0.21.0)
     pg (0.21.0-x64-mingw32)
     public_suffix (3.0.0)
     puma (3.10.0)
@@ -121,7 +125,7 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rubyzip (1.2.1)
-    sass (3.5.1)
+    sass (3.5.2)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -166,6 +170,7 @@ GEM
       nokogiri (~> 1.3)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES

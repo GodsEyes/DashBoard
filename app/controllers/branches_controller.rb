@@ -1,4 +1,6 @@
 class BranchesController < ApplicationController
+  http_basic_authenticate_with name: "root", password: "root", except: [:index, :show]
+
   def new
     @branch=Branch.new
   end
@@ -18,29 +20,36 @@ class BranchesController < ApplicationController
   end
 
 
-def create
-  # render plain: params[:branche].inspect
-  @branch = Branch.new(branch_params)
+  def create
+    # render plain: params[:branche].inspect
+    @branch = Branch.new(branch_params)
 
-  if @branch.save
-    redirect_to @branch
-  else
-    render 'new'
+    if @branch.save
+      redirect_to @branch
+    else
+      render 'new'
+    end
   end
-end
 
-def show
-  @branch=Branch.find(params[:id])
-end
+  def show
+    @branch=Branch.find(params[:id])
+  end
 
-def index
-  @branch = Branch.all
-end
+  def index
+    @branch = Branch.all
+  end
 
-private
-def branch_params
-  params.require(:branch).permit(:name,:code,:uid)
-end
+  def destroy
+    @branch=Branch.find(params[:id])
+    @branch.destroy
+
+    redirect_to branches_path
+  end
+
+  private
+  def branch_params
+    params.require(:branch).permit(:name,:code,:uid)
+  end
 
 
 end

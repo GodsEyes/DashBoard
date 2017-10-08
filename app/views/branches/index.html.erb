@@ -16,6 +16,7 @@
     <td><%= branch.code %></td>
     <td><%= branch.uid %></td>
     <td><%= link_to 'Изменить', edit_branch_path(branch) %></td>
+    <td><%= link_to 'Удалить', branch_path(branch), method: :delete, data: {confirm: "Удалить филиал?"} %></td>
   </tr>
   <% end %>
 </table>

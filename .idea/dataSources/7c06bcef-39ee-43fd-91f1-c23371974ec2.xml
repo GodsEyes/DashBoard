@@ -1,92 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="Rails DashBoardRarus: development">
-  <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.6">
-    <database id="1" name="rarus_database">
-      <object-id>16410</object-id>
-      <visible>1</visible>
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.4">
+    <root id="1"/>
+    <database id="2" parent="1" name="rarus_database">
+      <ObjectId>16388</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
     </database>
-    <database id="2" name="postgres">
-      <object-id>12401</object-id>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12415</ObjectId>
     </database>
-    <database id="3" name="test_database">
-      <object-id>16393</object-id>
+    <database id="4" parent="1" name="test_database">
+      <ObjectId>16384</ObjectId>
     </database>
-    <schema id="4" parent="1" name="public">
-      <object-id>2200</object-id>
-      <visible>1</visible>
-      <introspection-state-number>554</introspection-state-number>
-      <introspection-timestamp>2017-10-03.14:19:38.398</introspection-timestamp>
+    <database id="5" parent="1" name="platonovmw">
+      <ObjectId>16386</ObjectId>
+    </database>
+    <schema id="6" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-10-08.17:45:08.096</IntrospectionTimestamp>
+      <IntrospectionStateNumber>685</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
     </schema>
-    <schema id="5" parent="1" name="pg_catalog">
-      <object-id>11</object-id>
+    <schema id="7" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
     </schema>
-    <schema id="6" parent="1" name="pg_toast">
-      <object-id>99</object-id>
+    <schema id="8" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
     </schema>
-    <schema id="7" parent="1" name="pg_temp_1">
-      <object-id>11848</object-id>
+    <schema id="9" parent="2" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
     </schema>
-    <schema id="8" parent="1" name="pg_toast_temp_1">
-      <object-id>11849</object-id>
+    <schema id="10" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
     </schema>
-    <schema id="9" parent="1" name="information_schema">
-      <object-id>12113</object-id>
+    <schema id="11" parent="2" name="information_schema">
+      <ObjectId>12123</ObjectId>
     </schema>
-    <table id="10" parent="4" name="ar_internal_metadata">
-      <object-id>16419</object-id>
-      <state-number>554</state-number>
+    <sequence id="12" parent="6" name="branches_id_seq">
+      <ObjectId>16405</ObjectId>
+      <StateNumber>677</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="13" parent="6" name="tasks_id_seq">
+      <ObjectId>16416</ObjectId>
+      <StateNumber>685</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="14" parent="6" name="ar_internal_metadata">
+      <ObjectId>16397</ObjectId>
+      <StateNumber>676</StateNumber>
     </table>
-    <table id="11" parent="4" name="schema_migrations">
-      <object-id>16411</object-id>
-      <state-number>553</state-number>
+    <table id="15" parent="6" name="branches">
+      <ObjectId>16407</ObjectId>
+      <StateNumber>685</StateNumber>
     </table>
-    <column id="12" parent="10" name="key">
-      <state-number>554</state-number>
-      <mandatory>1</mandatory>
-      <data-type>varchar|0</data-type>
+    <table id="16" parent="6" name="schema_migrations">
+      <ObjectId>16389</ObjectId>
+      <StateNumber>675</StateNumber>
+    </table>
+    <table id="17" parent="6" name="tasks">
+      <ObjectId>16418</ObjectId>
+      <StateNumber>685</StateNumber>
+    </table>
+    <column id="18" parent="14" name="key">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>676</StateNumber>
     </column>
-    <column id="13" parent="10" name="value">
-      <state-number>554</state-number>
-      <data-type>varchar|0</data-type>
+    <column id="19" parent="14" name="value">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>676</StateNumber>
     </column>
-    <column id="14" parent="10" name="created_at">
-      <state-number>554</state-number>
-      <mandatory>1</mandatory>
-      <data-type>timestamp|0</data-type>
+    <column id="20" parent="14" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>676</StateNumber>
     </column>
-    <column id="15" parent="10" name="updated_at">
-      <state-number>554</state-number>
-      <mandatory>1</mandatory>
-      <data-type>timestamp|0</data-type>
+    <column id="21" parent="14" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>676</StateNumber>
     </column>
-    <index id="16" parent="10" name="ar_internal_metadata_pkey">
-      <object-id>16425</object-id>
-      <columns>key</columns>
-      <desc-columns></desc-columns>
-      <unique>1</unique>
+    <index id="22" parent="14" name="ar_internal_metadata_pkey">
+      <ObjectId>16403</ObjectId>
+      <ColNames>key</ColNames>
+      <Unique>1</Unique>
     </index>
-    <key id="17" parent="10" name="ar_internal_metadata_pkey">
-      <object-id>16426</object-id>
-      <columns>key</columns>
-      <underlying-index>ar_internal_metadata_pkey</underlying-index>
-      <primary>1</primary>
+    <key id="23" parent="14" name="ar_internal_metadata_pkey">
+      <ObjectId>16404</ObjectId>
+      <ColNames>key</ColNames>
+      <UnderlyingIndexName>ar_internal_metadata_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
     </key>
-    <column id="18" parent="11" name="version">
-      <state-number>553</state-number>
-      <mandatory>1</mandatory>
-      <data-type>varchar|0</data-type>
+    <column id="24" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>677</StateNumber>
+      <SequenceName>branches_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;branches_id_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <index id="19" parent="11" name="schema_migrations_pkey">
-      <object-id>16417</object-id>
-      <columns>version</columns>
-      <desc-columns></desc-columns>
-      <unique>1</unique>
+    <column id="25" parent="15" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>677</StateNumber>
+    </column>
+    <column id="26" parent="15" name="code">
+      <Position>3</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>677</StateNumber>
+    </column>
+    <column id="27" parent="15" name="uid">
+      <Position>4</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>677</StateNumber>
+    </column>
+    <column id="28" parent="15" name="created_at">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>677</StateNumber>
+    </column>
+    <column id="29" parent="15" name="updated_at">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>677</StateNumber>
+    </column>
+    <index id="30" parent="15" name="branches_pkey">
+      <ObjectId>16414</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
     </index>
-    <key id="20" parent="11" name="schema_migrations_pkey">
-      <object-id>16418</object-id>
-      <columns>version</columns>
-      <underlying-index>schema_migrations_pkey</underlying-index>
-      <primary>1</primary>
+    <key id="31" parent="15" name="branches_pkey">
+      <ObjectId>16415</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>branches_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
     </key>
+    <column id="32" parent="16" name="version">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>675</StateNumber>
+    </column>
+    <index id="33" parent="16" name="schema_migrations_pkey">
+      <ObjectId>16395</ObjectId>
+      <ColNames>version</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="34" parent="16" name="schema_migrations_pkey">
+      <ObjectId>16396</ObjectId>
+      <ColNames>version</ColNames>
+      <UnderlyingIndexName>schema_migrations_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>685</StateNumber>
+      <SequenceName>tasks_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;tasks_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="36" parent="17" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>685</StateNumber>
+    </column>
+    <column id="37" parent="17" name="branch_id">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>685</StateNumber>
+    </column>
+    <column id="38" parent="17" name="status">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>685</StateNumber>
+    </column>
+    <column id="39" parent="17" name="created_at">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>685</StateNumber>
+    </column>
+    <column id="40" parent="17" name="updated_at">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>685</StateNumber>
+    </column>
+    <index id="41" parent="17" name="tasks_pkey">
+      <ObjectId>16425</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="42" parent="17" name="index_tasks_on_branch_id">
+      <ObjectId>16432</ObjectId>
+      <ColNames>branch_id</ColNames>
+    </index>
+    <key id="43" parent="17" name="tasks_pkey">
+      <ObjectId>16426</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>tasks_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="44" parent="17" name="fk_rails_482aa427ce">
+      <ObjectId>16427</ObjectId>
+      <ColNames>branch_id</ColNames>
+      <RefTableId>16407</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>branches</RefTableName>
+      <RefKeyName>branches_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

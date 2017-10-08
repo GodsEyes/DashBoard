@@ -1,0 +1,14 @@
+<p>
+  <strong>Название:</strong>
+  <%= task.name %>
+</p>
+<p>
+  <strong>Статус:</strong>
+  <%= task.status %>
+</p>
+
+<p>
+  <%= link_to 'Удалить', [task.branch,task],
+              method: :delete,
+              data: {confirm: 'Действительно удалить задачу?'} %>
+</p>

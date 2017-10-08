@@ -2,13 +2,15 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Rails DashBoardRarus: development" uuid="7c06bcef-39ee-43fd-91f1-c23371974ec2">
-      <database-info product="PostgreSQL" version="9.6.5" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.1">
+      <database-info product="PostgreSQL" version="9.5.9" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4.1212">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
       <user-name>postgres</user-name>
-      <user-password>dfdadfc5dfd9dfdedfcddfd8dfcfdfd9</user-password>
+      <introspection-schemas>rarus_database:public</introspection-schemas>
       <resolve-scope>rarus_database:postgres,public</resolve-scope>
+      <unqualified-resolve-schemas>rarus_database:postgres,public</unqualified-resolve-schemas>
     </data-source>
     <data-source name="Rails DashBoardRarus: test" uuid="62fb68e0-6031-47c3-bfe3-98fa6fcc12d8">
       <database-info product="PostgreSQL" version="9.6.5" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.1">
@@ -16,7 +18,7 @@
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <user-name>postgres</user-name>
-      <user-password>dfdadfc5dfd9dfdedfcddfd8dfcfdfd9</user-password>
+      <introspection-schemas>test_database:public</introspection-schemas>
     </data-source>
   </component>
 </project>

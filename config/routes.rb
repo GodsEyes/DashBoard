@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   get 'start/show'
   get 'conf' =>'conf#index'
   resources :tasks
-  resources :branches
+  resources :branches do
+    resources :tasks
+  end
+
 
   root 'start#show'
 end

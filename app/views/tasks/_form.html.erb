@@ -1,0 +1,10 @@
+<%= form_with(model: [@branch, @branch.tasks.build], local: true) do |form| %>
+    <div><p>
+      <%= form.label "Название" %> <br>
+      <%= form.text_field :name %></div>
+    <div>
+      <%= form.label "Статус" %> <br>
+      <%= form.check_box :status %>
+      </p></div>
+    <p><%= form.submit "Назначить" %></p>
+<% end %>

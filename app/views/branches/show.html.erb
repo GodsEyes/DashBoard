@@ -11,4 +11,15 @@
   <strong>УИД:</strong>
   <%= @branch.uid %>
 </p>
+<p><%= link_to 'Изменить', edit_branch_path(@branch) %></p>
 <p><%= link_to 'Список филиалов', controller: 'branches' %></p>
+
+<hr>
+
+<h2>Добавить задачу</h2>
+<%= render 'tasks/form' %>
+
+<h2>Список задач:</h2>
+<%= render @branch.tasks %>
+
+
